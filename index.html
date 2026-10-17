@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nisha Patel | Software Developer (.NET)</title>
+<meta name="description" content="Portfolio of Nisha Patel, a software developer building .NET and ColdFusion web applications on SQL Server.">
+<style>
+:root{
+  --bg:#f5f7fa;--panel:#ffffff;--ink:#13263b;--muted:#4f6076;--line:#d3dbe5;--accent:#0b5cad;--accent-ink:#ffffff;--soft:#e8eef6;--ok:#0d7a4f;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0e1927;--panel:#142235;--ink:#e6edf5;--muted:#a3b2c4;--line:#27384c;--accent:#7db7f2;--accent-ink:#0e1927;--soft:#1a2b40;--ok:#5fd0a0;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0e1927;--panel:#142235;--ink:#e6edf5;--muted:#a3b2c4;--line:#27384c;--accent:#7db7f2;--accent-ink:#0e1927;--soft:#1a2b40;--ok:#5fd0a0;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;margin:0}
+h1{font-size:clamp(2.4rem,8vw,3.6rem);letter-spacing:-.015em}
+h2{font-size:1.5rem;margin:0 0 14px}
+h3{font-size:1.05rem;font-family:var(--sans);font-weight:650}
+p{margin:0 0 12px}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.bar-in{max-width:860px;margin:0 auto;padding:10px 22px;display:flex;align-items:center;gap:6px 18px;flex-wrap:wrap}
+.bar a.brand{font-family:var(--serif);font-weight:600;color:var(--ink);text-decoration:none;margin-right:auto}
+.bar nav{display:flex;gap:4px 16px;flex-wrap:wrap}
+.bar nav a{color:var(--muted);text-decoration:none;font-size:.92rem}
+.bar nav a:hover{color:var(--accent)}
+.toggle{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+main{max-width:860px;margin:0 auto;padding:44px 22px 64px}
+.hero{display:grid;grid-template-columns:1fr;gap:10px}
+.role{font-size:1.2rem;color:var(--muted);margin:8px 0 16px}
+.lead{max-width:60ch;font-size:1.07rem}
+.facts{display:flex;flex-wrap:wrap;gap:8px 28px;margin:18px 0 20px;padding:0;list-style:none}
+.facts li{font-size:.95rem;color:var(--muted)}
+.facts b{display:block;color:var(--ink);font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1.2}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;border-radius:8px;padding:10px 18px;font-weight:600;text-decoration:none;border:1px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent);background:transparent}
+.avail{color:var(--muted);font-size:.92rem;margin:14px 0 0}
+section{margin-top:50px;padding-top:28px;border-top:1px solid var(--line)}
+.path{list-style:none;margin:6px 0 0;padding:0 0 0 22px;border-left:2px solid var(--line)}
+.path li{position:relative;padding:0 0 16px 6px}
+.path li:last-child{padding-bottom:0}
+.path li::before{content:"";position:absolute;left:-30px;top:.5em;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.path li:last-child::before{background:var(--accent)}
+.path strong{display:block;font-weight:650}
+.path span{color:var(--muted);font-size:.95rem}
+@media (prefers-reduced-motion:no-preference){
+  .path li{opacity:0;transform:translateX(-8px);animation:step .5s ease forwards}
+  .path li:nth-child(1){animation-delay:.2s}.path li:nth-child(2){animation-delay:.55s}.path li:nth-child(3){animation-delay:.9s}.path li:nth-child(4){animation-delay:1.25s}.path li:nth-child(5){animation-delay:1.6s}
+  @keyframes step{to{opacity:1;transform:none}}
+}
+.job{margin-bottom:26px}
+.meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 16px}
+.meta .when{color:var(--muted);font-size:.92rem}
+.sub{color:var(--muted);margin:2px 0 10px;font-size:.95rem}
+ul.plain{margin:0;padding-left:20px}
+ul.plain li{margin-bottom:7px;max-width:70ch}
+.chip{display:inline-block;background:var(--soft);border-radius:5px;padding:2px 9px;margin:3px 5px 3px 0;font-size:.86rem}
+dl{margin:0;display:grid;grid-template-columns:minmax(130px,180px) 1fr;gap:12px 20px}
+dt{font-weight:650}
+dd{margin:0;color:var(--muted)}
+@media (max-width:560px){dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:12px}}
+.fit{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.fit p.note{color:var(--muted);font-size:.9rem;margin:10px 0 0}
+textarea{width:100%;min-height:130px;resize:vertical;border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--bg);color:var(--ink);font:inherit;font-size:.95rem}
+.fit button.run{margin-top:10px;border:0;background:var(--accent);color:var(--accent-ink);border-radius:8px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer}
+.fit button.clear{margin:10px 0 0 8px;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:8px;padding:9px 16px;font:inherit;cursor:pointer}
+#result{margin-top:16px}
+#result .score{font-family:var(--serif);font-size:1.4rem}
+#result .score span{color:var(--ok)}
+footer{margin-top:52px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="bar-in">
+    <a class="brand" href="#top">Nisha Patel</a>
+    <nav aria-label="Sections">
+      <a href="#flow">Process</a><a href="#exp">Experience</a><a href="#proj">Projects</a><a href="#skills">Skills</a><a href="#fit">Role fit</a>
+    </nav>
+    <button class="toggle" id="theme" type="button" aria-label="Switch light or dark theme">Theme</button>
+  </div>
+</div>
+
+<main id="top">
+<header class="hero">
+  <h1>Nisha Patel</h1>
+  <p class="role">Software Developer, .NET and ColdFusion &middot; Pune, India</p>
+  <p class="lead">I build and support enterprise web applications in .NET and ColdFusion on SQL Server for a global oil and gas services client. I work in 15-day Agile sprints, from client requirements to production support.</p>
+  <ul class="facts">
+    <li><b>2 years</b>professional experience</li>
+    <li><b>AZ-204</b>Azure Developer Associate</li>
+    <li><b>.NET + CFML</b>frontend and backend work</li>
+  </ul>
+  <div class="cta">
+    <a class="btn main" href="mailto:np6914302@gmail.com">Email me</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/nisha-patel-10832722a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <p class="avail">Serving my notice period at Capgemini. Last working day: 1 January 2027, available to join right after.</p>
+</header>
+
+<section aria-labelledby="flow">
+  <h2 id="flow">How a change moves through my sprint</h2>
+  <ol class="path">
+    <li><strong>Requirements</strong><span>Client meetings, then clarifying questions with senior team members.</span></li>
+    <li><strong>Build and test on dev</strong><span>.NET, ColdFusion or both, backed by SQL Server.</span></li>
+    <li><strong>QA testing</strong><span>I hand the change to a tester and fix what comes back.</span></li>
+    <li><strong>Pull request and review</strong><span>A senior reviews my pull request, and I review my co-developers&rsquo; pull requests.</span></li>
+    <li><strong>UAT, then production</strong><span>After release, I also handle production support tickets.</span></li>
+  </ol>
+</section>
+
+<section aria-labelledby="exp">
+  <h2 id="exp">Experience</h2>
+  <div class="job">
+    <div class="meta"><h3>Software Developer, Capgemini</h3><span class="when">December 2024 to present</span></div>
+    <p class="sub">Enterprise web applications for a global oil and gas services client &middot; Pune, India</p>
+    <ul class="plain">
+      <li>Deliver enhancement PBIs across .NET and ColdFusion (CFML) applications in 15-day Agile sprints, from requirement gathering with the client and senior team members to implementation, unit testing and pull requests.</li>
+      <li>Work across both layers of applications where a ColdFusion frontend is backed by a .NET service.</li>
+      <li>Investigate production-support tickets in a two-person support team: read logs and error messages, trace issues through the code and check the data in SQL Server to find the root cause.</li>
+      <li>Built Excel-based bulk upload features for part classification and RFQ supplier updates, with validation and result logging, replacing one-by-one record updates.</li>
+      <li>Implemented enhancements including mandatory-field validation in a line item classifier, a read-only Admin profile section, approval-detail updates and a chatbot widget integration.</li>
+      <li>Use Azure DevOps Repos and Boards for pull requests, code reviews and PBI tracking, and build and publish services to QA and test environments with Azure DevOps pipelines and Visual Studio.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="meta"><h3>Full Stack Developer Trainee, Q-Spiders</h3><span class="when">December 2023 to September 2024</span></div>
+    <p class="sub">Pune</p>
+    <ul class="plain">
+      <li>Completed a full-stack training program covering Core Java, SQL, HTML, CSS and JavaScript.</li>
+      <li>Practiced REST API concepts, tested APIs in Postman, and learned SDLC practices including Agile and Waterfall.</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="proj">
+  <h2 id="proj">Projects</h2>
+  <div class="job">
+    <div class="meta"><h3>Pharmacy Management System</h3><span class="when">Personal project, 2025</span></div>
+    <p class="sub"><span class="chip">C#</span><span class="chip">.NET Framework</span><span class="chip">Microservices</span><span class="chip">REST APIs</span><span class="chip">Swagger</span><span class="chip">Angular</span></p>
+    <p>A role-based web application for administrators, doctors and pharmacists, covering inventory, billing and prescription tracking. The backend is built as microservices in .NET with REST APIs documented in Swagger, and an Angular frontend sits on top.</p>
+  </div>
+  <div class="job">
+    <div class="meta"><h3>Medical Chatbot for Infectious Disease Prediction</h3><span class="when">Academic project, 2024</span></div>
+    <p class="sub"><span class="chip">Python</span><span class="chip">NLP</span><span class="chip">Machine Learning</span></p>
+    <p>An NLP chatbot that uses SVM and Decision Tree classifiers to predict likely diseases from symptoms and suggest precautions.</p>
+  </div>
+  <div class="job">
+    <div class="meta"><h3>Brain Tumour Classification</h3><span class="when">Academic project, 2023</span></div>
+    <p class="sub"><span class="chip">Python</span><span class="chip">TensorFlow</span><span class="chip">Deep Learning</span></p>
+    <p>A neural-network image classification project using brain MRI images.</p>
+  </div>
+</section>
+
+<section aria-labelledby="skills">
+  <h2 id="skills">Skills</h2>
+  <dl>
+    <dt>Languages and frontend</dt><dd>C#, ColdFusion (CFML), SQL, JavaScript, HTML, CSS, Angular</dd>
+    <dt>Backend and APIs</dt><dd>.NET Framework, REST APIs, Microservices</dd>
+    <dt>Databases</dt><dd>Microsoft SQL Server, SSMS, SQL queries, stored procedures, database debugging</dd>
+    <dt>Cloud and tools</dt><dd>Azure, Azure DevOps, CI/CD pipelines, Git, Visual Studio, VS Code, Postman, IIS, GitHub Copilot</dd>
+    <dt>Practices</dt><dd>Agile/Scrum, SDLC, requirement gathering, unit testing, pull requests, code reviews, debugging, log analysis, troubleshooting</dd>
+  </dl>
+  <h3 style="margin-top:22px">Certifications</h3>
+  <p class="sub" style="margin-top:6px">Microsoft Azure Developer Associate (AZ-204) &middot; Azure Fundamentals (AZ-900) &middot; Azure AI Fundamentals (AI-900) &middot; Capgemini OCEAN Levels 1 and 2 (Microsoft .NET)</p>
+  <h3 style="margin-top:14px">Education</h3>
+  <p class="sub" style="margin-top:6px">B.E. in Computer Engineering, Pravara Rural Engineering College, Loni (CGPA 8.38 / 10) &middot; MBA in Human Resources, Yashwantrao Chavan Maharashtra Open University, Nashik (completed)</p>
+</section>
+
+<section aria-labelledby="fit">
+  <h2 id="fit">Check my fit for your role</h2>
+  <div class="fit">
+    <label for="jd">Paste a job description to see which of my skills it mentions.</label>
+    <textarea id="jd" placeholder="Paste the job description here"></textarea>
+    <div>
+      <button class="run" id="run" type="button">Check fit</button>
+      <button class="clear" id="clear" type="button">Clear</button>
+    </div>
+    <div id="result" aria-live="polite"></div>
+    <p class="note">This runs in your browser using a keyword list. Nothing you paste is sent anywhere.</p>
+  </div>
+</section>
+
+<footer>
+  <p>To talk about a role, write to <a href="mailto:np6914302@gmail.com">np6914302@gmail.com</a> or message me on <a href="https://www.linkedin.com/in/nisha-patel-10832722a" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+</footer>
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  try{var saved=localStorage.getItem('theme');if(saved){root.setAttribute('data-theme',saved);}}catch(e){}
+  document.getElementById('theme').addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){cur=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+
+  var skills=[
+    ['C#',/\bc#|\bc sharp\b/i],['.NET',/\.net\b|\bdotnet\b|asp\.net/i],['ColdFusion / CFML',/coldfusion|\bcfml\b|\blucee\b/i],
+    ['SQL Server',/sql server|\bmssql\b|\bms sql\b|\bt-sql\b|\btsql\b/i],['SQL',/\bsql\b/i],['REST APIs',/\brest\b|restful|web api|\bapis?\b/i],
+    ['Angular',/angular/i],['JavaScript',/javascript|\bjs\b/i],['HTML and CSS',/\bhtml5?\b|\bcss3?\b/i],
+    ['Azure',/\bazure\b/i],['Azure DevOps',/azure devops|\bado\b/i],['CI/CD',/ci\/cd|\bcicd\b|continuous integration|continuous delivery|continuous deployment/i],
+    ['Git',/\bgit\b|github|bitbucket/i],['Microservices',/microservice/i],['Agile / Scrum',/\bagile\b|\bscrum\b|sprint/i],
+    ['Unit testing',/unit test|\btdd\b|\bxunit\b|\bnunit\b|test case/i],['Code reviews',/code review|pull request/i],
+    ['Debugging and troubleshooting',/debug|troubleshoot|root cause|production support/i],['Stored procedures',/stored procedure/i],
+    ['IIS',/\biis\b/i],['Postman',/postman/i],['Swagger',/swagger|openapi/i],['GitHub Copilot',/copilot/i],['Python',/\bpython\b/i],
+    ['Requirement gathering',/requirement/i],['SDLC',/\bsdlc\b|software development life ?cycle/i]
+  ];
+  var out=document.getElementById('result'),jd=document.getElementById('jd');
+  document.getElementById('run').addEventListener('click',function(){
+    var text=jd.value.trim();
+    if(!text){out.textContent='Paste a job description first.';return;}
+    var hit=skills.filter(function(s){return s[1].test(text);});
+    out.innerHTML='';
+    var score=document.createElement('p');score.className='score';
+    score.innerHTML='<span>'+hit.length+'</span> of my '+skills.length+' listed skills appear in this description.';
+    out.appendChild(score);
+    if(hit.length){
+      var box=document.createElement('p');
+      hit.forEach(function(s){var c=document.createElement('span');c.className='chip';c.textContent=s[0];box.appendChild(c);});
+      out.appendChild(box);
+    }
+    var tip=document.createElement('p');tip.style.color='var(--muted)';tip.style.fontSize='.92rem';
+    tip.textContent='Terms in the description that are not on my skills list are not counted.';
+    out.appendChild(tip);
+  });
+  document.getElementById('clear').addEventListener('click',function(){jd.value='';out.textContent='';});
+})();
+</script>
+</body>
+</html>
